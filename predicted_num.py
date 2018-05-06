@@ -21,97 +21,63 @@ def set_last(last):
         if not last:
             return
         else:
-            print(sorted(list(_last)))
+            print(sorted(list(_last)), len(_last))
     else:
         pass
 
 
+def right_num(num_t, num_rs):
+    return num_t.count(num_rs[0]) + num_t.count(num_rs[1]) + num_t.count(num_rs[2])
+
+
+def right_pos(num_t, num_rs):
+    count0 = 1 if num_t[0] == num_rs[0] else 0
+    count1 = 1 if num_t[1] == num_rs[1] else 0
+    count2 = 1 if num_t[2] == num_rs[2] else 0
+    return count0 + count1 + count2
+
+
 def predicted_rs_with_100(num_t):
-    rs1 = list()
+    rs = list()
     for i in all_num:
-        if i[0] == num_t[0]:
-            if {i[1], i[2]} & {num_t[1], num_t[2]}:
-                pass
-            else:
-                rs1.append(i)
-        else:
-            pass
-    rs2 = list()
-    for i in all_num:
-        if i[1] == num_t[1]:
-            if {i[0], i[2]} & {num_t[0], num_t[2]}:
-                pass
-            else:
-                rs2.append(i)
-        else:
-            pass
-    rs3 = list()
-    for i in all_num:
-        if i[2] == num_t[2]:
-            if {i[0], i[1]} & {num_t[0], num_t[1]}:
-                pass
-            else:
-                rs3.append(i)
-        else:
-            pass
-    rs = set(rs1) | set(rs2) | set(rs3)
+        if right_num(i, num_t) == 1 and right_pos(i, num_t) == 1:
+            rs.append(i)
     set_last(rs)
     return rs
 
 
 def predicted_rs_with_001(num_t):
-    rs = [i for i in all_num if not (set(i) & set(num_t))]
+    rs = list()
+    for i in all_num:
+        if right_num(i, num_t) == 0 and right_pos(i, num_t) == 0:
+            rs.append(i)
     set_last(rs)
     return rs
 
 
 def predicted_rs_with_030(num_t):
-    rp = [num_t[0], num_t[1], num_t[2], num_t[0], num_t[1], num_t[2]]
     rs = list()
-    for index in range(1, 3):
-        rs.append(tuple(rp[index:index + 3]))
+    for i in all_num:
+        if right_num(i, num_t) == 3 and right_pos(i, num_t) == 0:
+            rs.append(i)
     set_last(rs)
     return rs
 
 
 def predicted_rs_with_110(num_t):
-    rs1 = list()
-    for i in all_num:  # 第一个数对
-        if i[0] == num_t[0]:
-            if num_t[1] == i[2] and i[1] != num_t[2]:
-                rs1.append(i)
-            elif num_t[2] == i[1] and i[2] != num_t[1]:
-                rs1.append(i)
-        else:
-            pass
-
-    rs2 = list()
-    for i in all_num:  # 第二个数对
-        if i[1] == num_t[1]:
-            if num_t[0] == i[2] and i[0] != num_t[2]:
-                rs2.append(i)
-            elif num_t[2] == i[0] and i[2] != num_t[0]:
-                rs2.append(i)
-        else:
-            pass
-
-    rs3 = list()
-    for i in all_num:  # 第三个数对
-        if i[2] == num_t[2]:
-            if num_t[1] == i[0] and i[1] != num_t[0]:
-                rs2.append(i)
-            elif num_t[0] == i[1] and i[0] != num_t[1]:
-                rs2.append(i)
-        else:
-            pass
-
-    rs = set(rs1) | set(rs2) | set(rs3)
+    rs = list()
+    for i in all_num:
+        if right_num(i, num_t) == 2 and right_pos(i, num_t) == 1:
+            rs.append(i)
     set_last(rs)
     return rs
 
 
 def predicted_rs_with_120(num_t):
-    rs = [(num_t[0], num_t[2], num_t[1]), (num_t[2], num_t[1], num_t[0]), (num_t[1], num_t[0], num_t[2])]
+    rs = list()
+    for i in all_num:
+        if right_num(i, num_t) == 3 and right_pos(i, num_t) == 1:
+            rs.append(i)
     set_last(rs)
     return rs
 
@@ -119,38 +85,8 @@ def predicted_rs_with_120(num_t):
 def predicted_rs_with_010(num_t):
     rs = list()
     for i in all_num:
-        if num_t[0] == i[1]:
-            if {num_t[1], num_t[2]} & {i[0], i[2]}:
-                pass
-            else:
-                rs.append(i)
-        elif num_t[0] == i[2]:
-            if {num_t[1], num_t[2]} & {i[0], i[1]}:
-                pass
-            else:
-                rs.append(i)
-        elif num_t[1] == i[0]:
-            if {num_t[0], num_t[2]} & {i[1], i[2]}:
-                pass
-            else:
-                rs.append(i)
-        elif num_t[1] == i[2]:
-            if {num_t[0], num_t[2]} & {i[0], i[1]}:
-                pass
-            else:
-                rs.append(i)
-        elif num_t[2] == i[0]:
-            if {num_t[0], num_t[1]} & {i[2], i[1]}:
-                pass
-            else:
-                rs.append(i)
-        elif num_t[2] == i[1]:
-            if {num_t[0], num_t[1]} & {i[2], i[0]}:
-                pass
-            else:
-                rs.append(i)
-        else:
-            pass
+        if right_num(i, num_t) == 1 and right_pos(i, num_t) == 0:
+            rs.append(i)
     set_last(rs)
     return rs
 
@@ -158,13 +94,8 @@ def predicted_rs_with_010(num_t):
 def predicted_rs_with_020(num_t):
     rs = list()
     for i in all_num:
-        if (i.count(num_t[0]) + i.count(num_t[1]) + i.count(num_t[2])) == 2:
-            if (i[0] != num_t[0]) and (i[1] != num_t[1]) and  (i[2] != num_t[2]):
-                rs.append(i)
-            else:
-                pass
-        else:
-            pass
+        if right_num(i, num_t) == 2 and right_pos(i, num_t) == 0:
+            rs.append(i)
     set_last(rs)
     return rs
 
@@ -172,14 +103,8 @@ def predicted_rs_with_020(num_t):
 def predicted_rs_with_200(num_t):
     rs = list()
     for i in all_num:
-        if i[0] == num_t[0] and i[1] == num_t[1] and i[2] != num_t[2]:
+        if right_num(i, num_t) == 2 and right_pos(i, num_t) == 2:
             rs.append(i)
-        elif i[0] == num_t[0] and i[2] == num_t[2] and i[1] != num_t[1]:
-            rs.append(i)
-        elif i[1] == num_t[1] and i[2] == num_t[2] and i[0] != num_t[0]:
-            rs.append(i)
-        else:
-            pass
     set_last(rs)
     return rs
 
