@@ -1,5 +1,6 @@
 # coding=utf-8
 import os
+from functools import partial
 
 import psutil
 
@@ -14,8 +15,8 @@ class Node(object):
 
 class DirNode(Node):
 
-    def __init__(self, path):
-        super(DirNode, self).__init__(path, 0, enum(path, ex_mounts))
+    def __init__(self, path, func):
+        super(DirNode, self).__init__(path, 0, func())
 
     def __str__(self):
         return 'DIR {} {}'.format(self._size, self._path)
@@ -30,7 +31,7 @@ class FileNode(Node):
         return 'File {} {}'.format(self._size, self._path)
 
 
-def enum(path, ex_mounts):
+def enum(path):
     if os.path.isdir(path):
         rs = list()
         for node in os.listdir(path):
@@ -41,7 +42,8 @@ def enum(path, ex_mounts):
                 if file_path in ex_mounts:
                     continue
                 else:
-                    rs.append(DirNode(file_path))
+                    func = partial(enum, file_path)
+                    rs.append(DirNode(file_path, func))
             elif os.path.isfile(file_path):
                 rs.append(FileNode(file_path))
         return rs
@@ -56,5 +58,5 @@ ex_mounts.add('/sys')
 
 print(ex_mounts)
 
-for node in enum(target_point, ex_mounts):
+for node in enum(target_point):
     print(node)
