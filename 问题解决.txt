@@ -3,3 +3,4 @@
 2. 将python 重命名成 python2 或者 python3
 3. 改名后pip 会找不到以前的python 报错 "Fatal error in launcher: Unable to create process using '"'"
 4. 此时需要重新安装下 pip , python2 -m pip install --upgrade --force-reinstall pip
+5. pycharm 数据库显示时区问题，在 advance vm 加入 -Duser.timezone=GMT+08
