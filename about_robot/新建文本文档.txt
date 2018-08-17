@@ -1,0 +1,9 @@
+1. 安装 python2.7
+2. 安装 firefox
+3. 安装 geckodriver
+4. 	pip install robotframework
+	pip install robotframework-seleniumlibrary
+	pip install Wxpython
+	pip install robotframework-ride
+
+	
