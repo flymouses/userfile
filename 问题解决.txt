@@ -1,6 +1,14 @@
-#### python2 和 python3 同时安装
+
+#### Windows python2 和 python3 同时安装
 1. 安装过后记得修改环境变量
 2. 将python 重命名成 python2 或者 python3
 3. 改名后pip 会找不到以前的python 报错 "Fatal error in launcher: Unable to create process using '"'"
 4. 此时需要重新安装下 pip , python2 -m pip install --upgrade --force-reinstall pip
 5. pycharm 数据库显示时区问题，在 advance vm 加入 -Duser.timezone=GMT+08
+
+#### Linux 安装python3
+1. 安装python 依赖库 yum -y install zlib-devel bzip2-devel openssl-devel ncurses-devel sqlite-devel readline-devel tk-devel gdbm-devel db4-devel libpcap-devel xz-devel
+2. 官网下载压缩包
+3. 解压，cd pythonXXX
+4. ./configure # 默认安装到 /usr/local/bin/ /usr/local/lib/
+5. make && make install
