@@ -51,3 +51,29 @@ mkisofs -o Custom-CentOS.iso -J -r -hide-rr-moved -hide-joliet-trans-tbl -V Cent
 
 "/usr/libexec/qemu-kvm" -cpu core2duo -rtc clock=host,driftfix=none -boot menu=off -enable-kvm -device virtio-scsi-pci,id=scsi0 -bios /usr/share/seabios/bios-256k.original.bin -m 512M -cpu core2duo -vnc 0.0.0.0:333 -smp sockets=1,cores=2 -usb -vga std -device virtio-blk-pci,scsi=off,drive=drive-virtio-disk1,serial=e9fe184af052475aac7621bfac1f01b0,bootindex=100 -drive file=/home/Modified-CentOS-7-livecd-GNOME-x86_64.iso,if=none,id=drive-virtio-disk1,cache=writethrough
 
+
+rpm -e --nodeps package
+
+mksquashfs [source folder] [SquashFS target file] -b 1048576 -comp xz -Xdict-size 100%
+yum remove avahi-autoipd avahi-libs avahi chrony postfix
+mkdir {dev,proc,etc,sbin,bin,lib,mnt,usr}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
