@@ -1,6 +1,79 @@
-#### python2 和 python3 同时安装
+
+#### Windows python2 和 python3 同时安装
 1. 安装过后记得修改环境变量
 2. 将python 重命名成 python2 或者 python3
 3. 改名后pip 会找不到以前的python 报错 "Fatal error in launcher: Unable to create process using '"'"
 4. 此时需要重新安装下 pip , python2 -m pip install --upgrade --force-reinstall pip
 5. pycharm 数据库显示时区问题，在 advance vm 加入 -Duser.timezone=GMT+08
+
+#### Linux 安装python3
+1. 安装python 依赖库 yum -y install zlib-devel bzip2-devel openssl-devel ncurses-devel sqlite-devel readline-devel tk-devel gdbm-devel db4-devel libpcap-devel xz-devel gcc samba
+2. 官网下载压缩包
+3. 解压，cd pythonXXX
+4. ./configure # 默认安装到 /usr/local/bin/ /usr/local/lib/
+5. make && make install
+
+#### samba
+1. rpm -q samba
+2. yum install samba
+4. 安装ntfs-3g https://www.tuxera.com/community/open-source-ntfs-3g/ ./configure;make && make install
+5. systemctl disable NetworkManager
+7. systemctl stop firewalld ; systemctl disable firewalld
+8. 禁用：selinux /etc/selinux SELINUX=disabled
+9. systemctl disable smb;systemctl disable nmb
+
+客户端处安装 yum install cifs-utils
+
+mount -t cifs //172.29.100.100/wuo/W2003R2PAR_1_2018-08-01T20-30-38.350867 /mnt/smb/ -o username="wuo",password="843207",iocharset=utf8,ro,file_mode=0777,dir_mode=0777
+
+
+#### shell退出 后台任务不退出
+1. yum install coreutils 
+2. nohub cmd &
+
+cp /etc/yum.repos.d/* /home/myroot/etc/yum.repos.d/
+cp /etc/resolv.conf /home/myroot/etc/
+
+yum install python34
+$ curl -O https://bootstrap.pypa.io/get-pip.py 
+chroot
+$ sudo /usr/bin/python3.4 get-pip.py # chrot
+cp linux_iso.service /usr/lib/systemd/system/
+ln -s /usr/lib/systemd/system/linux_iso.service /etc/systemd/system/multi-user.target.wants/linux_iso.service
+
+mkisofs -R -l -L -D -J -b isolinux/isolinux.bin -c isolinux/boot.catalog -o /home/Modified-CentOS-7-livecd-GNOME-x86_64.iso -no-emul-boot -boot-load-size 4 -boot-info-table -V "CentOS-7-livecd-GNOME-x86_64" .
+
+mkisofs -r -J -T -V "CentOS-7-livecd-GNOME-x86_64" -o ../mynew.iso -b isolinux/isolinux.bin -c isolinux/boot.cat -no-emul-boot -boot-load-size 4 -boot-info-table .
+
+
+mkisofs -o Custom-CentOS.iso -J -r -hide-rr-moved -hide-joliet-trans-tbl -V CentOS-7-livecd-GNOME-x86_64 -b isolinux/isolinux.bin -c isolinux/boot.cat -no-emul-boot -boot-load-size 4 -boot-info-table /iso/CentOS-6.2-x86_64-LiveCD
+
+
+"/usr/libexec/qemu-kvm" -cpu core2duo -rtc clock=host,driftfix=none -boot menu=off -enable-kvm -device virtio-scsi-pci,id=scsi0 -bios /usr/share/seabios/bios-256k.original.bin -m 512M -cpu core2duo -vnc 0.0.0.0:333 -smp sockets=1,cores=2 -usb -vga std -device virtio-blk-pci,scsi=off,drive=drive-virtio-disk1,serial=e9fe184af052475aac7621bfac1f01b0,bootindex=100 -drive file=/home/Modified-CentOS-7-livecd-GNOME-x86_64.iso,if=none,id=drive-virtio-disk1,cache=writethrough
+
+
+rpm -e --nodeps package
+
+mksquashfs [source folder] [SquashFS target file] -b 1048576 -comp xz -Xdict-size 100%
+yum remove avahi-autoipd avahi-libs avahi chrony postfix
+mkdir {dev,proc,etc,sbin,bin,lib,mnt,usr}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
