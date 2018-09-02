@@ -59,9 +59,11 @@ yum remove avahi-autoipd avahi-libs avahi chrony postfix
 mkdir {dev,proc,etc,sbin,bin,lib,mnt,usr}
 
 
-
-
-
+/usr/libexec/qemu-kvm -enable-kvm -m 2048 -usb -boot d -cdrom ./Custom-CentOS.iso -vnc 0.0.0.0:333
+yum --releasever=/ --installroot=$CHROOT install yum
+172.16.200.254
+zhoubo01@clerware.cq
+12345678
 
 
 
