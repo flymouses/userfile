@@ -15,6 +15,7 @@
 1. windows
 	1. pip install SnakeViz
 	2. snakeviz program.prof
+	3. snakeviz generate_parameters_f6269a2a38154664a8251176c6d5064c.stats -H 172.16.2.56 -p 8888 -s 不打开浏览器
 2. linux 
     1. gprof2dot -f pstats output.pstats | dot -Tpng -o output.png 转化成图的形式
 

@@ -57,18 +57,91 @@ rpm -e --nodeps package
 mksquashfs [source folder] [SquashFS target file] -b 1048576 -comp xz -Xdict-size 100%
 yum remove avahi-autoipd avahi-libs avahi chrony postfix
 mkdir {dev,proc,etc,sbin,bin,lib,mnt,usr}
+cp -a /dev/console /home/iso/myrootfs/dev
+cp -a /dev/ramdisk /home/iso/myrootfs/dev
+cp -a /dev/ram0 /home/iso/myrootfs/dev
+cp -a /dev/null /home/iso/myrootfs/dev
+cp -a /dev/tty1 /home/iso/myrootfs/dev
+cp -a /dev/tty2 /home/iso/myrootfs/dev
 
+mount -t proc proc proc/
+mount -t sysfs sys sys/
+mount -o bind /dev dev/
 
 /usr/libexec/qemu-kvm -enable-kvm -m 2048 -usb -boot d -cdrom ./Custom-CentOS.iso -vnc 0.0.0.0:333
-yum --releasever=/ --installroot=$CHROOT install yum
+yum --releasever=/ --installroot=$CHROOT -y install coreutils
+yum grouplist --installroot=$(pwd) --releasever=/
 172.16.200.254
 zhoubo01@clerware.cq
 12345678
 
+# use scsi
+/usr/libexec/qemu-kvm -cpu host -rtc clock=host,driftfix=none -enable-kvm -boot menu=off -device virtio-scsi-pci,id=scsi0 -drive file=./tinycore-custom.iso,if=none,id=drive-scsi0-0-0-0 -device scsi-cd,bus=scsi0.0,channel=0,scsi-id=0,lun=0,drive=drive-scsi0-0-0-0 -m 2048M -cpu core2duo -vnc 0.0.0.0:300 -smp sockets=1,cores=2 -usb -vga std
+# use ide, 需要加入bios 及-no-clerwaredev
+/usr/libexec/qemu-kvm -cpu host -rtc clock=host,driftfix=none -enable-kvm -boot menu=off -drive file=/home/build_iso/work/Custom-CentOS.iso,if=none,id=drive-ide2,media=cdrom -device ide-cd,bus=ide.1,unit=0,drive=drive-ide2,id=ide2,bootindex=200 -m 2048M -cpu core2duo -vnc 0.0.0.0:300 -smp sockets=1,cores=2 -usb -vga std -bios /usr/share/seabios/bios-256k.original.bin -no-clerwaredev
+
+
+zlib-devel
+bzip2-devel
+openssl-devel
+ncurses-devel
+sqlite-devel
+readline-devel
+tk-devel
+gdbm-devel
+db4-devel
+libpcap-devel
+xz-devel
+
+yum groupremove "GNOME Desktop Environment"
+for i in $(./busyboxc/busybox --list);do ln -s ./busyboxc/busybox $i;done
+
+cpio -i --make-directories < initrd-2.6.14.2.img
+
+CentOS-7-livecd-x86_64
+
+iptables -A INPUT -s 172.16.2.131 -j DROP
+mknod -m 660 /dev/tty0 c 4 0
+package-cleanup --leaves --all
+ps aux|grep multi_threading_process_hangs|grep -v grep|awk '{print $2}'|xargs kill -9
+systemd-analyze blame
+systemd-analyze plot> plot.svg
+
+
+mount -t cifs //{samba_server}/{samba_user}/{samba_user}/{host_name}/ {dst_point} -o username="{samba_user}",password="{samba_password}",iocharset=utf8,ro,vers=3.0
+mount -t cifs "//172.16.2.51/kwz/WIN-EBLFG7R2OG3_44_2018-09-12T16-03-20.735014/" home1 -o username="kwz",password="928064",iocharset=utf8,ro,vers=3.0
+mount -t cifs "//172.16.2.51/kwz/W2008R2(F4S0)_49_2018-09-12T17-01-38.422313/" home2 -o username="kwz",password="928064",iocharset=utf8,ro,vers=3.0
+
+sed -i '/172.29.100.1/d' /root/.ssh/known_hosts
+
+
+/etc/systemd/system/basic.target.wants/rhel-dmesg.service
+
+floppy.allowed_drive_mask=0 
+
+import cProfile
+import marshal
+
+profiler = cProfile.Profile()
+profiler.runcall(work.work)
+profiler.create_stats()
+profiler.dump_stats('filename')
+
+snakeviz generate_parameters_f6269a2a38154664a8251176c6d5064c.stats -H 172.16.2.56 -p 8888 -s
+ssh -C -f -N -g root@172.29.100.4 -L 33333:172.29.100.4:22
 
 
 
 
+#!/bin/sh
+
+host=$1
+echo $1
+sshpass -vp 'f' scp /home/linux_iso/Custom-CentOS.iso root@$1:/home/linux_iso/
+sshpass -vp 'f' scp -r /sbin/aio/linux_iso root@$1:/sbin/aio/
+sshpass -vp 'f' scp /usr/sbin/aio/logic_service/samba.py root@$1:/sbin/aio/logic_service/
+sshpass -vp 'f' scp /usr/sbin/aio/box_dashboard/apiv1/views.py root@$1:/sbin/aio/box_dashboard/apiv1/
+#scp /usr/sbin/aio/box_dashboard/xdashboard/templates/restore_body.html root@$1:/sbin/aio/box_dashboard/xdashboard/templates/
 
 
 
