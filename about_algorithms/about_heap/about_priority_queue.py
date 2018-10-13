@@ -13,6 +13,18 @@ class MinIndexPQ(object):
         pass
 
 
+def sort_multi_items(list_iters):
+    """
+    合并多个有序得流
+    list_iters:[ iter1, iter2 ]
+    """
+    rs = list()
+    while True:
+        current_value = [None] * len(list_iters)
+        for index, item in enumerate(list_iters):
+            pass
+
+
 if __name__ == '__main__':
     pq = MinIndexPQ()
     pq.insert([3, 4, 5])
