@@ -143,6 +143,30 @@ sshpass -vp 'f' scp /usr/sbin/aio/logic_service/samba.py root@$1:/sbin/aio/logic
 sshpass -vp 'f' scp /usr/sbin/aio/box_dashboard/apiv1/views.py root@$1:/sbin/aio/box_dashboard/apiv1/
 #scp /usr/sbin/aio/box_dashboard/xdashboard/templates/restore_body.html root@$1:/sbin/aio/box_dashboard/xdashboard/templates/
 
+#### gdb with python
+sudo yum install yum-utils
+sudo debuginfo-install glibc
+sudo yum install gdb python-debuginfo
+
+
+/usr/share/gdb/python/gdb
+python import sys
+python sys.path.insert(0, ¡°/usr/share/gdb/python/gdb¡±)
+python import libpython
+
+#### °²×°·ûºÅ±í
+wget "https://dl.fedoraproject.org/pub/epel/7Server/x86_64/debug/Packages/p/python34-debuginfo-3.4.9-1.el7.x86_64.rpm"
+source /usr/lib/debug/usr/lib64/libpython3.4m.so.1.0.debug-gdb.py
+py-by
+py-list
+py-locals
+
+
+1019  yum install gdb python-debuginfo
+ 1020  debuginfo-install bzip2-libs-1.0.6-13.el7.x86_64 keyutils-libs-1.5.8-3.el7.x86_64 krb5-libs-1.15.1-8.el7.x86_64 libcom_err-1.42.9-9.el7.x86_64 libffi-3.0.13-18.el7.x86_64 libgcc-4.8.5-11.el7.x86_64 libselinux-2.5-6.el7.x86_64 libstdc++-4.8.5-11.el7.x86_64 libuuid-2.23.2-33.el7.x86_64 openssl-libs-1.0.2k-8.el7.x86_64 pcre-8.32-15.el7_2.1.x86_64 sqlite-3.7.17-8.el7.x86_64 xz-libs-5.2.2-1.el7.x86_64 zlib-1.2.7-17.el7.x86_64
+
+
+
 
 
 
