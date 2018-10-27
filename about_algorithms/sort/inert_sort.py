@@ -1,5 +1,3 @@
-from random import randint
-
 from sort.sort_utils import *
 
 
