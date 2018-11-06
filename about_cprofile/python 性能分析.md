@@ -1,16 +1,31 @@
-#### python 性能分析 
+###使用：
+#### 直接运行脚本
 1. python -m cProfile -o newstats [cmd] 指定输出，不指定就到标准输出
+#### 模块中使用
+1. 
 
-##### 使用：
-2. import pstats
-	p = pstats.Stats(file_name)
-	print(p.strip_dirs().sort_stats('tottime').print_stats(15))
-3. from xdashboard.handle.home import getStatusList_debug as foo
-4. import cProfile
-5. cProfile.runctx('foo(5)', globals(), locals())
-6. cProfile.runctx('foo(5)', globals(), locals(), filename='/tmp/get_host1')
-7. python manage.py shell --settings="testss"
+	```
+		profiler = cProfile.Profile()
+		profiler.runcall(work.work) 
+		profiler.create_stats()
+		profiler.dump_stats('filename')
+	```	
+	
+2.  
 
+	```
+		cProfile.runctx('foo(5)', globals(), locals(), filename='/tmp/get_host1')
+	```	
+
+3.  
+
+	```
+		profiler = cProfile.Profile()
+		cProfile.runctx('foo(5)', globals(), locals())
+		profiler.create_stats()
+		profiler.dump_stats('filename')
+	```	
+	
 #### 图形化
 1. windows
 	1. pip install SnakeViz
