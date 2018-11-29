@@ -166,9 +166,22 @@ py-locals
  1020  debuginfo-install bzip2-libs-1.0.6-13.el7.x86_64 keyutils-libs-1.5.8-3.el7.x86_64 krb5-libs-1.15.1-8.el7.x86_64 libcom_err-1.42.9-9.el7.x86_64 libffi-3.0.13-18.el7.x86_64 libgcc-4.8.5-11.el7.x86_64 libselinux-2.5-6.el7.x86_64 libstdc++-4.8.5-11.el7.x86_64 libuuid-2.23.2-33.el7.x86_64 openssl-libs-1.0.2k-8.el7.x86_64 pcre-8.32-15.el7_2.1.x86_64 sqlite-3.7.17-8.el7.x86_64 xz-libs-5.2.2-1.el7.x86_64 zlib-1.2.7-17.el7.x86_64
 
 # 创建动态链接库
-gcc -shared -o mcmp.so -fPIC mcmp.c quicklz.c
+gcc -shared -o archive_helper.so -fPIC archive_helper.c quicklz.c
 
-gcc -fPIC mcmp.c quicklz.c -o mcmp -lrt -Wl,-rpath,./
+gcc -fPIC archive_helper.c quicklz.c -o archive_helper -lrt -Wl,-rpath,./
+
+#### alembic
+	1. 创建一次迁移
+		alembic revision -m "create table"
+		
+	2. 修改产生的迁移文件
+	
+	3. 执行更新 alembic upgrade head
+
+cd /sbin/aio/logic_service/media/;alembic upgrade head
+cd /sbin/aio/box_dashboard/;python manage.py makemigrations;python manage.py migrate
+
+
 
 
 
