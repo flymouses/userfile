@@ -178,6 +178,9 @@ gcc -fPIC archive_helper.c quicklz.c -o archive_helper -lrt -Wl,-rpath,./
 	
 	3. 执行更新 alembic upgrade head
 
+更新 rpc box_dashboard logic_service archive_helper.so
+	
+pip install alembic
 cd /sbin/aio/logic_service/media/;alembic upgrade head
 cd /sbin/aio/box_dashboard/;python manage.py makemigrations;python manage.py migrate
 
