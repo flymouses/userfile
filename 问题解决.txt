@@ -184,7 +184,8 @@ pip install alembic
 cd /sbin/aio/logic_service/media/;alembic upgrade head
 cd /sbin/aio/box_dashboard/;python manage.py makemigrations;python manage.py migrate
 
-
+#### rsync 
+1. rsync: Failed to exec ssh: No such file or directory (2) 没有安装ssh客户端 yum install -y openssh-clients
 
 
 
