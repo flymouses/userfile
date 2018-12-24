@@ -13,6 +13,13 @@
 4. ./configure # 默认安装到 /usr/local/bin/ /usr/local/lib/
 5. make && make install
 
+#### linux 安装python2
+1. 安装python前需要先安装 依赖包 yum -y install libssl-dev zlib-devel bzip2-devel openssl openssl-devel ncurses-devel sqlite-devel readline-devel tk-devel gdbm-devel db4-devel libpcap-devel xz-devel gcc
+2. ./configure && make && make install
+3. make && make install 
+4. 下载get-pip.py 官网下载
+5. python2 get-pip.py
+
 #### samba
 1. rpm -q samba
 2. yum install samba
@@ -184,8 +191,12 @@ pip install alembic
 cd /sbin/aio/logic_service/media/;alembic upgrade head
 cd /sbin/aio/box_dashboard/;python manage.py makemigrations;python manage.py migrate
 
+# 查看发行版本
+lsb_release -a
 
-
+# 设置 yum 源
+1. 编辑/etc/yum.repos.d/CentOS-Base.repo
+2. 修正baseurl=http://vault.centos.org
 
 
 
