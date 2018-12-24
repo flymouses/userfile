@@ -193,6 +193,9 @@ cd /sbin/aio/box_dashboard/;python manage.py makemigrations;python manage.py mig
 
 # 查看发行版本
 lsb_release -a
+#### 收集硬件信息
+1. yum install -y lrzsz rsync openssh-clients
+2. rsync: Failed to exec ssh: No such file or directory (2) 没有安装ssh客户端 yum install -y openssh-clients
 
 # 设置 yum 源
 1. 编辑/etc/yum.repos.d/CentOS-Base.repo
