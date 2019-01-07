@@ -202,6 +202,8 @@ lsb_release -a
 2. 修正baseurl=http://vault.centos.org
 
 
-
-
+# 安装psutil 报错 
+   1. psutil/_psutil_common.c:9:20: fatal error: Python.h: No such file or directory
+      #include <Python.h>
+   2. yum -y install python-devel
 
