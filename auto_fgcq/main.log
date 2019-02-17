@@ -1,0 +1,279 @@
+2019-02-17 18:27:56,918 - __main__ - ERROR - Main error need more than 0 values to unpack
+Traceback (most recent call last):
+  File "E:/userfile/auto_fgcq/main.py", line 61, in run
+    for title, win in auto.getWindows():
+ValueError: need more than 0 values to unpack
+2019-02-17 18:28:01,921 - __main__ - ERROR - Main error need more than 0 values to unpack
+Traceback (most recent call last):
+  File "E:/userfile/auto_fgcq/main.py", line 61, in run
+    for title, win in auto.getWindows():
+ValueError: need more than 0 values to unpack
+2019-02-17 18:28:06,923 - __main__ - ERROR - Main error need more than 0 values to unpack
+Traceback (most recent call last):
+  File "E:/userfile/auto_fgcq/main.py", line 61, in run
+    for title, win in auto.getWindows():
+ValueError: need more than 0 values to unpack
+2019-02-17 18:28:09,124 - __main__ - ERROR - new worker failed:Thread.__init__() not called
+Traceback (most recent call last):
+  File "E:/userfile/auto_fgcq/main.py", line 66, in run
+    w = Actor(title, win)
+  File "E:/userfile/auto_fgcq/main.py", line 43, in __init__
+    self.name = 'Actor_{}'.format(self.title)
+  File "E:\Python34\lib\threading.py", line 1084, in name
+    assert self._initialized, "Thread.__init__() not called"
+AssertionError: Thread.__init__() not called
+2019-02-17 18:28:14,156 - __main__ - ERROR - new worker failed:Thread.__init__() not called
+Traceback (most recent call last):
+  File "E:/userfile/auto_fgcq/main.py", line 66, in run
+    w = Actor(title, win)
+  File "E:/userfile/auto_fgcq/main.py", line 43, in __init__
+    self.name = 'Actor_{}'.format(self.title)
+  File "E:\Python34\lib\threading.py", line 1084, in name
+    assert self._initialized, "Thread.__init__() not called"
+AssertionError: Thread.__init__() not called
+2019-02-17 18:28:19,158 - __main__ - ERROR - new worker failed:Thread.__init__() not called
+Traceback (most recent call last):
+  File "E:/userfile/auto_fgcq/main.py", line 66, in run
+    w = Actor(title, win)
+  File "E:/userfile/auto_fgcq/main.py", line 43, in __init__
+    self.name = 'Actor_{}'.format(self.title)
+  File "E:\Python34\lib\threading.py", line 1084, in name
+    assert self._initialized, "Thread.__init__() not called"
+AssertionError: Thread.__init__() not called
+2019-02-17 18:28:24,161 - __main__ - ERROR - new worker failed:Thread.__init__() not called
+Traceback (most recent call last):
+  File "E:/userfile/auto_fgcq/main.py", line 66, in run
+    w = Actor(title, win)
+  File "E:/userfile/auto_fgcq/main.py", line 43, in __init__
+    self.name = 'Actor_{}'.format(self.title)
+  File "E:\Python34\lib\threading.py", line 1084, in name
+    assert self._initialized, "Thread.__init__() not called"
+AssertionError: Thread.__init__() not called
+2019-02-17 18:28:29,164 - __main__ - ERROR - new worker failed:Thread.__init__() not called
+Traceback (most recent call last):
+  File "E:/userfile/auto_fgcq/main.py", line 66, in run
+    w = Actor(title, win)
+  File "E:/userfile/auto_fgcq/main.py", line 43, in __init__
+    self.name = 'Actor_{}'.format(self.title)
+  File "E:\Python34\lib\threading.py", line 1084, in name
+    assert self._initialized, "Thread.__init__() not called"
+AssertionError: Thread.__init__() not called
+2019-02-17 18:28:34,168 - __main__ - ERROR - new worker failed:Thread.__init__() not called
+Traceback (most recent call last):
+  File "E:/userfile/auto_fgcq/main.py", line 66, in run
+    w = Actor(title, win)
+  File "E:/userfile/auto_fgcq/main.py", line 43, in __init__
+    self.name = 'Actor_{}'.format(self.title)
+  File "E:\Python34\lib\threading.py", line 1084, in name
+    assert self._initialized, "Thread.__init__() not called"
+AssertionError: Thread.__init__() not called
+2019-02-17 18:28:39,172 - __main__ - ERROR - new worker failed:Thread.__init__() not called
+Traceback (most recent call last):
+  File "E:/userfile/auto_fgcq/main.py", line 66, in run
+    w = Actor(title, win)
+  File "E:/userfile/auto_fgcq/main.py", line 43, in __init__
+    self.name = 'Actor_{}'.format(self.title)
+  File "E:\Python34\lib\threading.py", line 1084, in name
+    assert self._initialized, "Thread.__init__() not called"
+AssertionError: Thread.__init__() not called
+2019-02-17 18:28:44,176 - __main__ - ERROR - new worker failed:Thread.__init__() not called
+Traceback (most recent call last):
+  File "E:/userfile/auto_fgcq/main.py", line 66, in run
+    w = Actor(title, win)
+  File "E:/userfile/auto_fgcq/main.py", line 43, in __init__
+    self.name = 'Actor_{}'.format(self.title)
+  File "E:\Python34\lib\threading.py", line 1084, in name
+    assert self._initialized, "Thread.__init__() not called"
+AssertionError: Thread.__init__() not called
+2019-02-17 18:28:49,179 - __main__ - ERROR - new worker failed:Thread.__init__() not called
+Traceback (most recent call last):
+  File "E:/userfile/auto_fgcq/main.py", line 66, in run
+    w = Actor(title, win)
+  File "E:/userfile/auto_fgcq/main.py", line 43, in __init__
+    self.name = 'Actor_{}'.format(self.title)
+  File "E:\Python34\lib\threading.py", line 1084, in name
+    assert self._initialized, "Thread.__init__() not called"
+AssertionError: Thread.__init__() not called
+2019-02-17 18:28:54,182 - __main__ - ERROR - new worker failed:Thread.__init__() not called
+Traceback (most recent call last):
+  File "E:/userfile/auto_fgcq/main.py", line 66, in run
+    w = Actor(title, win)
+  File "E:/userfile/auto_fgcq/main.py", line 43, in __init__
+    self.name = 'Actor_{}'.format(self.title)
+  File "E:\Python34\lib\threading.py", line 1084, in name
+    assert self._initialized, "Thread.__init__() not called"
+AssertionError: Thread.__init__() not called
+2019-02-17 18:28:58,653 - __main__ - ERROR - new worker failed:'LP_c_long' object has no attribute 'resize'
+Traceback (most recent call last):
+  File "E:/userfile/auto_fgcq/main.py", line 65, in run
+    w = Actor(title, win)
+  File "E:/userfile/auto_fgcq/main.py", line 44, in __init__
+    self.win.resize(900, 500)
+AttributeError: 'LP_c_long' object has no attribute 'resize'
+2019-02-17 18:29:03,656 - __main__ - ERROR - new worker failed:'LP_c_long' object has no attribute 'resize'
+Traceback (most recent call last):
+  File "E:/userfile/auto_fgcq/main.py", line 65, in run
+    w = Actor(title, win)
+  File "E:/userfile/auto_fgcq/main.py", line 44, in __init__
+    self.win.resize(900, 500)
+AttributeError: 'LP_c_long' object has no attribute 'resize'
+2019-02-17 18:29:08,659 - __main__ - ERROR - new worker failed:'LP_c_long' object has no attribute 'resize'
+Traceback (most recent call last):
+  File "E:/userfile/auto_fgcq/main.py", line 65, in run
+    w = Actor(title, win)
+  File "E:/userfile/auto_fgcq/main.py", line 44, in __init__
+    self.win.resize(900, 500)
+AttributeError: 'LP_c_long' object has no attribute 'resize'
+2019-02-17 18:29:13,661 - __main__ - ERROR - new worker failed:'LP_c_long' object has no attribute 'resize'
+Traceback (most recent call last):
+  File "E:/userfile/auto_fgcq/main.py", line 65, in run
+    w = Actor(title, win)
+  File "E:/userfile/auto_fgcq/main.py", line 44, in __init__
+    self.win.resize(900, 500)
+AttributeError: 'LP_c_long' object has no attribute 'resize'
+2019-02-17 18:29:24,528 - PIL.Image - DEBUG - Importing BlpImagePlugin
+2019-02-17 18:29:24,584 - PIL.Image - DEBUG - Importing BmpImagePlugin
+2019-02-17 18:29:24,673 - PIL.Image - DEBUG - Importing BufrStubImagePlugin
+2019-02-17 18:29:24,692 - PIL.Image - DEBUG - Importing CurImagePlugin
+2019-02-17 18:29:24,721 - PIL.Image - DEBUG - Importing DcxImagePlugin
+2019-02-17 18:29:24,741 - PIL.Image - DEBUG - Importing DdsImagePlugin
+2019-02-17 18:29:24,754 - PIL.Image - DEBUG - Importing EpsImagePlugin
+2019-02-17 18:29:24,830 - PIL.Image - DEBUG - Importing FitsStubImagePlugin
+2019-02-17 18:29:24,850 - PIL.Image - DEBUG - Importing FliImagePlugin
+2019-02-17 18:29:24,868 - PIL.Image - DEBUG - Importing FpxImagePlugin
+2019-02-17 18:29:24,882 - PIL.Image - DEBUG - Image: failed to import FpxImagePlugin: No module named 'olefile'
+2019-02-17 18:29:24,882 - PIL.Image - DEBUG - Importing FtexImagePlugin
+2019-02-17 18:29:24,889 - PIL.Image - DEBUG - Importing GbrImagePlugin
+2019-02-17 18:29:24,896 - PIL.Image - DEBUG - Importing GifImagePlugin
+2019-02-17 18:29:24,929 - PIL.Image - DEBUG - Importing GribStubImagePlugin
+2019-02-17 18:29:24,940 - PIL.Image - DEBUG - Importing Hdf5StubImagePlugin
+2019-02-17 18:29:24,961 - PIL.Image - DEBUG - Importing IcnsImagePlugin
+2019-02-17 18:29:25,001 - PIL.Image - DEBUG - Importing IcoImagePlugin
+2019-02-17 18:29:25,007 - PIL.Image - DEBUG - Importing ImImagePlugin
+2019-02-17 18:29:25,018 - PIL.Image - DEBUG - Importing ImtImagePlugin
+2019-02-17 18:29:25,024 - PIL.Image - DEBUG - Importing IptcImagePlugin
+2019-02-17 18:29:25,031 - PIL.Image - DEBUG - Importing JpegImagePlugin
+2019-02-17 18:29:25,106 - PIL.Image - DEBUG - Importing Jpeg2KImagePlugin
+2019-02-17 18:29:25,106 - PIL.Image - DEBUG - Importing McIdasImagePlugin
+2019-02-17 18:29:25,112 - PIL.Image - DEBUG - Importing MicImagePlugin
+2019-02-17 18:29:25,120 - PIL.Image - DEBUG - Image: failed to import MicImagePlugin: No module named 'olefile'
+2019-02-17 18:29:25,120 - PIL.Image - DEBUG - Importing MpegImagePlugin
+2019-02-17 18:29:25,127 - PIL.Image - DEBUG - Importing MpoImagePlugin
+2019-02-17 18:29:25,152 - PIL.Image - DEBUG - Importing MspImagePlugin
+2019-02-17 18:29:25,180 - PIL.Image - DEBUG - Importing PalmImagePlugin
+2019-02-17 18:29:25,196 - PIL.Image - DEBUG - Importing PcdImagePlugin
+2019-02-17 18:29:25,202 - PIL.Image - DEBUG - Importing PcxImagePlugin
+2019-02-17 18:29:25,202 - PIL.Image - DEBUG - Importing PdfImagePlugin
+2019-02-17 18:29:25,253 - PIL.Image - DEBUG - Importing PixarImagePlugin
+2019-02-17 18:29:25,259 - PIL.Image - DEBUG - Importing PngImagePlugin
+2019-02-17 18:29:25,259 - PIL.Image - DEBUG - Importing PpmImagePlugin
+2019-02-17 18:29:25,266 - PIL.Image - DEBUG - Importing PsdImagePlugin
+2019-02-17 18:29:25,273 - PIL.Image - DEBUG - Importing SgiImagePlugin
+2019-02-17 18:29:25,294 - PIL.Image - DEBUG - Importing SpiderImagePlugin
+2019-02-17 18:29:25,300 - PIL.Image - DEBUG - Importing SunImagePlugin
+2019-02-17 18:29:25,306 - PIL.Image - DEBUG - Importing TgaImagePlugin
+2019-02-17 18:29:25,317 - PIL.Image - DEBUG - Importing TiffImagePlugin
+2019-02-17 18:29:25,317 - PIL.Image - DEBUG - Importing WebPImagePlugin
+2019-02-17 18:29:25,354 - PIL.Image - DEBUG - Importing WmfImagePlugin
+2019-02-17 18:29:25,366 - PIL.Image - DEBUG - Importing XbmImagePlugin
+2019-02-17 18:29:25,386 - PIL.Image - DEBUG - Importing XpmImagePlugin
+2019-02-17 18:29:25,402 - PIL.Image - DEBUG - Importing XVThumbImagePlugin
+2019-02-17 18:31:40,749 - PIL.Image - DEBUG - Importing BlpImagePlugin
+2019-02-17 18:31:40,752 - PIL.Image - DEBUG - Importing BmpImagePlugin
+2019-02-17 18:31:40,756 - PIL.Image - DEBUG - Importing BufrStubImagePlugin
+2019-02-17 18:31:40,758 - PIL.Image - DEBUG - Importing CurImagePlugin
+2019-02-17 18:31:40,759 - PIL.Image - DEBUG - Importing DcxImagePlugin
+2019-02-17 18:31:40,762 - PIL.Image - DEBUG - Importing DdsImagePlugin
+2019-02-17 18:31:40,763 - PIL.Image - DEBUG - Importing EpsImagePlugin
+2019-02-17 18:31:40,831 - PIL.Image - DEBUG - Importing FitsStubImagePlugin
+2019-02-17 18:31:40,833 - PIL.Image - DEBUG - Importing FliImagePlugin
+2019-02-17 18:31:40,834 - PIL.Image - DEBUG - Importing FpxImagePlugin
+2019-02-17 18:31:40,836 - PIL.Image - DEBUG - Image: failed to import FpxImagePlugin: No module named 'olefile'
+2019-02-17 18:31:40,836 - PIL.Image - DEBUG - Importing FtexImagePlugin
+2019-02-17 18:31:40,837 - PIL.Image - DEBUG - Importing GbrImagePlugin
+2019-02-17 18:31:40,838 - PIL.Image - DEBUG - Importing GifImagePlugin
+2019-02-17 18:31:40,841 - PIL.Image - DEBUG - Importing GribStubImagePlugin
+2019-02-17 18:31:40,842 - PIL.Image - DEBUG - Importing Hdf5StubImagePlugin
+2019-02-17 18:31:40,843 - PIL.Image - DEBUG - Importing IcnsImagePlugin
+2019-02-17 18:31:40,847 - PIL.Image - DEBUG - Importing IcoImagePlugin
+2019-02-17 18:31:40,848 - PIL.Image - DEBUG - Importing ImImagePlugin
+2019-02-17 18:31:40,850 - PIL.Image - DEBUG - Importing ImtImagePlugin
+2019-02-17 18:31:40,851 - PIL.Image - DEBUG - Importing IptcImagePlugin
+2019-02-17 18:31:40,853 - PIL.Image - DEBUG - Importing JpegImagePlugin
+2019-02-17 18:31:40,862 - PIL.Image - DEBUG - Importing Jpeg2KImagePlugin
+2019-02-17 18:31:40,863 - PIL.Image - DEBUG - Importing McIdasImagePlugin
+2019-02-17 18:31:40,864 - PIL.Image - DEBUG - Importing MicImagePlugin
+2019-02-17 18:31:40,866 - PIL.Image - DEBUG - Image: failed to import MicImagePlugin: No module named 'olefile'
+2019-02-17 18:31:40,866 - PIL.Image - DEBUG - Importing MpegImagePlugin
+2019-02-17 18:31:40,867 - PIL.Image - DEBUG - Importing MpoImagePlugin
+2019-02-17 18:31:40,868 - PIL.Image - DEBUG - Importing MspImagePlugin
+2019-02-17 18:31:40,869 - PIL.Image - DEBUG - Importing PalmImagePlugin
+2019-02-17 18:31:40,871 - PIL.Image - DEBUG - Importing PcdImagePlugin
+2019-02-17 18:31:40,872 - PIL.Image - DEBUG - Importing PcxImagePlugin
+2019-02-17 18:31:40,872 - PIL.Image - DEBUG - Importing PdfImagePlugin
+2019-02-17 18:31:40,889 - PIL.Image - DEBUG - Importing PixarImagePlugin
+2019-02-17 18:31:40,891 - PIL.Image - DEBUG - Importing PngImagePlugin
+2019-02-17 18:31:40,891 - PIL.Image - DEBUG - Importing PpmImagePlugin
+2019-02-17 18:31:40,892 - PIL.Image - DEBUG - Importing PsdImagePlugin
+2019-02-17 18:31:40,893 - PIL.Image - DEBUG - Importing SgiImagePlugin
+2019-02-17 18:31:40,894 - PIL.Image - DEBUG - Importing SpiderImagePlugin
+2019-02-17 18:31:40,909 - PIL.Image - DEBUG - Importing SunImagePlugin
+2019-02-17 18:31:40,910 - PIL.Image - DEBUG - Importing TgaImagePlugin
+2019-02-17 18:31:40,911 - PIL.Image - DEBUG - Importing TiffImagePlugin
+2019-02-17 18:31:40,911 - PIL.Image - DEBUG - Importing WebPImagePlugin
+2019-02-17 18:31:40,913 - PIL.Image - DEBUG - Importing WmfImagePlugin
+2019-02-17 18:31:40,916 - PIL.Image - DEBUG - Importing XbmImagePlugin
+2019-02-17 18:31:40,922 - PIL.Image - DEBUG - Importing XpmImagePlugin
+2019-02-17 18:31:40,924 - PIL.Image - DEBUG - Importing XVThumbImagePlugin
+2019-02-17 18:32:23,896 - PIL.Image - DEBUG - Importing BlpImagePlugin
+2019-02-17 18:32:23,899 - PIL.Image - DEBUG - Importing BmpImagePlugin
+2019-02-17 18:32:23,904 - PIL.Image - DEBUG - Importing BufrStubImagePlugin
+2019-02-17 18:32:23,905 - PIL.Image - DEBUG - Importing CurImagePlugin
+2019-02-17 18:32:23,906 - PIL.Image - DEBUG - Importing DcxImagePlugin
+2019-02-17 18:32:23,908 - PIL.Image - DEBUG - Importing DdsImagePlugin
+2019-02-17 18:32:23,909 - PIL.Image - DEBUG - Importing EpsImagePlugin
+2019-02-17 18:32:23,963 - PIL.Image - DEBUG - Importing FitsStubImagePlugin
+2019-02-17 18:32:23,965 - PIL.Image - DEBUG - Importing FliImagePlugin
+2019-02-17 18:32:23,966 - PIL.Image - DEBUG - Importing FpxImagePlugin
+2019-02-17 18:32:23,968 - PIL.Image - DEBUG - Image: failed to import FpxImagePlugin: No module named 'olefile'
+2019-02-17 18:32:23,968 - PIL.Image - DEBUG - Importing FtexImagePlugin
+2019-02-17 18:32:23,969 - PIL.Image - DEBUG - Importing GbrImagePlugin
+2019-02-17 18:32:23,970 - PIL.Image - DEBUG - Importing GifImagePlugin
+2019-02-17 18:32:23,975 - PIL.Image - DEBUG - Importing GribStubImagePlugin
+2019-02-17 18:32:23,976 - PIL.Image - DEBUG - Importing Hdf5StubImagePlugin
+2019-02-17 18:32:23,977 - PIL.Image - DEBUG - Importing IcnsImagePlugin
+2019-02-17 18:32:23,981 - PIL.Image - DEBUG - Importing IcoImagePlugin
+2019-02-17 18:32:23,982 - PIL.Image - DEBUG - Importing ImImagePlugin
+2019-02-17 18:32:23,984 - PIL.Image - DEBUG - Importing ImtImagePlugin
+2019-02-17 18:32:23,985 - PIL.Image - DEBUG - Importing IptcImagePlugin
+2019-02-17 18:32:23,986 - PIL.Image - DEBUG - Importing JpegImagePlugin
+2019-02-17 18:32:23,995 - PIL.Image - DEBUG - Importing Jpeg2KImagePlugin
+2019-02-17 18:32:23,995 - PIL.Image - DEBUG - Importing McIdasImagePlugin
+2019-02-17 18:32:23,996 - PIL.Image - DEBUG - Importing MicImagePlugin
+2019-02-17 18:32:23,998 - PIL.Image - DEBUG - Image: failed to import MicImagePlugin: No module named 'olefile'
+2019-02-17 18:32:23,998 - PIL.Image - DEBUG - Importing MpegImagePlugin
+2019-02-17 18:32:23,999 - PIL.Image - DEBUG - Importing MpoImagePlugin
+2019-02-17 18:32:24,000 - PIL.Image - DEBUG - Importing MspImagePlugin
+2019-02-17 18:32:24,001 - PIL.Image - DEBUG - Importing PalmImagePlugin
+2019-02-17 18:32:24,003 - PIL.Image - DEBUG - Importing PcdImagePlugin
+2019-02-17 18:32:24,004 - PIL.Image - DEBUG - Importing PcxImagePlugin
+2019-02-17 18:32:24,004 - PIL.Image - DEBUG - Importing PdfImagePlugin
+2019-02-17 18:32:24,020 - PIL.Image - DEBUG - Importing PixarImagePlugin
+2019-02-17 18:32:24,022 - PIL.Image - DEBUG - Importing PngImagePlugin
+2019-02-17 18:32:24,022 - PIL.Image - DEBUG - Importing PpmImagePlugin
+2019-02-17 18:32:24,023 - PIL.Image - DEBUG - Importing PsdImagePlugin
+2019-02-17 18:32:24,024 - PIL.Image - DEBUG - Importing SgiImagePlugin
+2019-02-17 18:32:24,025 - PIL.Image - DEBUG - Importing SpiderImagePlugin
+2019-02-17 18:32:24,026 - PIL.Image - DEBUG - Importing SunImagePlugin
+2019-02-17 18:32:24,027 - PIL.Image - DEBUG - Importing TgaImagePlugin
+2019-02-17 18:32:24,028 - PIL.Image - DEBUG - Importing TiffImagePlugin
+2019-02-17 18:32:24,028 - PIL.Image - DEBUG - Importing WebPImagePlugin
+2019-02-17 18:32:24,030 - PIL.Image - DEBUG - Importing WmfImagePlugin
+2019-02-17 18:32:24,031 - PIL.Image - DEBUG - Importing XbmImagePlugin
+2019-02-17 18:32:24,034 - PIL.Image - DEBUG - Importing XpmImagePlugin
+2019-02-17 18:32:24,035 - PIL.Image - DEBUG - Importing XVThumbImagePlugin
+2019-02-17 18:32:26,972 - __main__ - INFO - Actor_fgauto1: logic start ...
+2019-02-17 18:33:59,392 - __main__ - INFO - Actor_fgauto1: logic start ...
+2019-02-17 18:34:25,162 - __main__ - INFO - Actor_fgauto1: logic start ...
+2019-02-17 18:44:21,189 - __main__ - INFO - Actor_fgauto1: logic start ... Winodow[]
+2019-02-17 18:44:29,985 - __main__ - INFO - Actor_fgauto1: logic start ... Winodow[<pyautogui._window_win.Window object at 0x0000000004CC0320>]
