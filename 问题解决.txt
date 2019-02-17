@@ -206,4 +206,13 @@ lsb_release -a
    1. psutil/_psutil_common.c:9:20: fatal error: Python.h: No such file or directory
       #include <Python.h>
    2. yum -y install python-devel
+   
+# 安装pygetwindow 报错
+1. pip install pygetwindow==0.0.1
+
+# windows python 实现自动补齐
+1. 安装 pip install pyreadline
+2. 将tab.py 放到 D:\Python\Python35-32\Lib 下
+
+   
 
