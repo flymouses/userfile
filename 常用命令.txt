@@ -1,0 +1,246 @@
+﻿vcenter:
+    服务器IP： 172.16.200.254
+    用户名： zhoubo01@clerware.cq
+    密码： 12345678
+
+邮箱:
+    网页版本:mail.clerware.com
+    帐号:zhoubo@clerware.com
+    密码:clerware@123456
+
+wifi:
+    SSID是GUEST000,密码是a8WQCxia
+
+公用的百度云盘:
+    用户名:  13372703414
+    密   码: Clerware@123
+
+连接克隆：
+    .\c.ps1 -Username zhoubo01@clerware.cq -Password 12345678 -SourceVM MB_san03_svr2008x64r2_sp2cn_pvscsi_mbr -CloneVM rd_zb_back_2008
+
+python打包服务器：
+    172.16.6.93 HH0CX3YF4gsdQmIi centos 5 X64 
+    172.16.6.94 centos 5 X86
+
+
+强制umount 卷设备
+fuser -k mountpoint
+
+3323409624
+blog:TestOnlyMe
+mima:zz@@11223344
+
+#### 更改systemctl 服务的配置文件后 后需要执行的命令
+systemctl daemon-reexec
+
+#### 安装scp命令
+yum install openssh-clients 
+
+#### 读取完整的文件路径
+readlink -f filename
+
+{% verbatim %}
+    {{ vue }}
+{% endverbatim %}
+
+
+113.248.139.165 公网IP
+
+# 防火墙
+iptables -I INPUT -s 172.16.136.12 -j DROP
+五 清除iptables的语法
+iptables [-t tables] [-FXZ]
+选项与参数：
+-F：清除所有制订的规则
+-X：清除所有用户“自定义”的chain
+-Z：将所有chain的计数与流量统计都归
+iptables -A IN_public_allow -p tcp -j ACCEPT
+firewall-cmd --zone=public --add-port=12345/tcp --add-port=12344/tcp --permanent
+firewall-cmd --reload
+sudo firewall-cmd --zone=public --list-all
+sudo firewall-cmd --list-all-zones
+
+
+# 端口转发
+ssh  -L 22222:localhost:21114  root@172.16.6.21
+
+# postgresql 数据导入导出
+# 导出
+su postgres
+pg_dump box_dashboard -p 21114 > /tmp/db.sql
+
+# 导入
+psql -p 21114
+DROP DATABASE testdb;
+CREATE DATABASE testdb OWNER postgres;
+\q
+psql -d testdb -f /tmp/db.sql -p 21114
+http://172.16.1.61/O%3A/driver_pool/out 驱动库
+
+# 查看空间占用
+SELECT relname, pg_relation_filepath(oid), relpages FROM pg_class ORDER BY relpages DESC; # relpages 一页8K oid 为文件节点编号
+
+
+yum  whatprovides  */lspci
+
+
+# SUSE 开启ssh
+/etc/sysconfig/SuSEfirewall2 
+    FW_SERVICES_EXT_TCP="ssh"
+/etc/ssh/sshd_config
+    PasswordAuthentication yes
+    PermitRootLogin yes
+
+
+# centos bonding net face
+1:安装bonding,modprobe --first-time bonding
+2:查看 modinfo bonding
+3：
+    	
+
+# 公司地址
+重庆市渝中区长江一路61号(鹅岭地产大厦)1号楼13-1
+
+
+# 开启一体机后台
+1.vi /etc/systemd/logind.conf
+2.NAutoVTs=6  ReserveVT=6
+3.systemctl restart systemd-logind
+
+#Venter 启动
+#venter.exe -locale zh_CN -s Server -u Username -p Password
+D:\VMware1\Infrastructure\Virtual Infrastructure Client\Launcher\VpxClient.exe -locale zh_CN -s 172.16.200.254 -u zhoubo01@clerware.cq -p 12345678
+
+# 开机会执行的脚本
+C:\Users\Administrator\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup
+
+# 删除乱码文件
+1：ll -i 找到文件的节点号
+2：find -inum 12312312 -delete
+
+# 排查线程占用CPU
+1:ps -mp 48103 -o THREAD,tid,time | sort -rn
+2:找到最提高的线程
+3:转换成 16进制 printf "%x\n" 7777
+
+
+# vpn
+账号  zb  密码  H3d5S6wsN
+
+# udev 规则：
+/etc/udev/rules.d/
+udevinfo -a -p /sys/class/net/eth1
+udevadm info -a -p /sys/class/net/eth1
+udevinfo -e # 导出所有信息
+#  查看udev 日志
+1. 调整日志的等级
+udevadm control --log_priority="info" 
+2. 重新load 所有的规矩
+udevadm control --reload_rules
+
+# 跟新一体机在线更新地址 
+http://172.16.6.195:8000/xdashboard/version_handle/?a=seturl&url=172.16.1.61
+
+
+git clone git@172.16.1.11:AIO/ip2sys.git
+git checkout master
+git pull
+chmod a+x ./*.sh
+./cxfreeze_build.sh
+
+添加网关
+ip route add default via 172.16.1.1
+
+
+（1）统计各进程打开句柄数：lsof -n|awk '{print $2}'|sort|uniq -c|sort -nr
+
+（2）统计各用户打开句柄数：lsof -n|awk '{print $3}'|sort|uniq -c|sort -nr
+
+（3）统计各命令打开句柄数：lsof -n|awk '{print $1}'|sort|uniq -c|sort -nr
+
+#### linux debug
+在grub中：
+删除rhgb和quiet
+rhgb表示redhat graphics boot，就是会看到图片来代替启动过程中显示的文本信息
+quiet表示在启动过程中只有重要信息显示，类似硬件自检的消息不回显示
+加入 console=ttyS0,115200,8N1
+
+#### 端口转发
+ssh的三个强大的端口转发命令：
+– 转发到远端：ssh -C -f -N -g -L 本地端口:目标IP:目标端口 用户名@目标IP
+– 转发到本地：ssh -C -f -N -g –R 本地端口:目标IP:目标端口 用户名@目标IP
+– ssh -C -f -N -g -D listen_port user@Tunnel_Host
+
+1. 转发到远端： ssh -C -f -N -g root@10.121.34.119 -L 3307:10.121.34.119:3306 # 将本地的3307端口数据 转发到10.121.34.119:3306
+-C ：压缩数据传输。
+-f ：后台认证用户/密码，通常和 -N 连用，不用登录到远程主机。
+-N ：不执行脚本或命令，通常与 -f 连用。
+-g ：在-L/-R/-D参数中，允许远程主机连接到建立的转发的端口，如果不加这个参数，只允许本地主机建立连接。
+-L ：转发规则，本地端口:目标IP:目标端口
+
+#### systemctl 
+systemctl list-unit-files -a --type service |grep enabled # 查看启用的服务
+
+import pdb
+pdb.set_trace()
+python -m pdb manage.py runserver 172.16.6.23:8888
+
+#### wget with daili
+wget -e "http_proxy=http://127.0.0.1:8087" http://www.subversion.org.cn/svnbook/1.4/
+
+yum -y install sshpass
+sshpass -p 'passwd' scp xxxxxx
+smbcontrol all reload-config
+systemctl restart smb;systemctl restart nmb
+
+#### 字符集
+
+1. 产看当前系统语言设置
+locale
+2. 查看当前支持的设置
+locale -a
+3. 设置系统使用语言
+echo LANG=en_US.UTF-8 > /etc/locale.conf
+
+3. 编译字符集
+	“
+	   说明：编译的源在 /usr/share/i18n/
+	   en_US （语言_地域）
+	   utf-8 (字符集)
+	   编译后的文件 /usr/lib/locale/locale-archive
+    ”
+    localedef -c -f UTF-8 -i en_US en_US.UTF-8
+
+# 删除当前目录文件
+find . -maxdepth 1 -type f -delete
+
+# nginx 转发请求
+proxy_pass http://127.0.0.1:8888;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
