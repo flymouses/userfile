@@ -126,6 +126,9 @@ C:\Users\Administrator\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Sta
 
 # vpn
 账号  zb  密码  H3d5S6wsN
+twinslab.3322.org
+softlumos.3322.org
+
 
 # udev 规则：
 /etc/udev/rules.d/
