@@ -214,5 +214,21 @@ lsb_release -a
 1. 安装 pip install pyreadline
 2. 将tab.py 放到 D:\Python\Python35-32\Lib 下
 
+
+#### 独立运行django脚本
+1. 脚本需要放置在项目目录下
+2. 需要以下import 
+```
+import os
+import sys
+import django
+
+os.environ.setdefault("DJANGO_SETTINGS_MODULE", "box_dashboard.settings")
+django.setup()
+```
+
+
+
+
    
 
