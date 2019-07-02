@@ -220,8 +220,8 @@ find . -maxdepth 1 -type f -delete
 # nginx 转发请求
 proxy_pass http://127.0.0.1:8888;
 
-
-
+# 查找特定类型文件的大小
+find -name "*.jpg" -exec du -ch {} +
 
 
 
