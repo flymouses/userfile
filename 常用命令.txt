@@ -223,10 +223,11 @@ proxy_pass http://127.0.0.1:8888;
 # 查找特定类型文件的大小
 find -name "*.jpg" -exec du -ch {} +
 
+# 拷贝 同时保留目录
+cp --parents src dst
 
-
-
-
+# 激活pycharm 
+http://idea.lanyus.com/
 
 
 
