@@ -4,11 +4,15 @@ import readline
 import rlcompleter  
 import atexit  
 import os   
+import platform
 readline.parse_and_bind('tab: complete')  
-# windows
-histfile = os.path.join(os.environ['HOMEPATH'], '.pythonhistory')  
-# linux
-# histfile = os.path.join(os.environ['HOME'], '.pythonhistory')  
+
+if platform.system().lower() == 'windows':
+    # windows
+    histfile = os.path.join(os.environ['HOMEPATH'], '.pythonhistory')
+else:  
+    # linux
+    histfile = os.path.join(os.environ['HOME'], '.pythonhistory')  
 try:  
     readline.read_history_file(histfile)  
 except IOError:  
