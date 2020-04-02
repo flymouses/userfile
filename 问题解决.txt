@@ -217,3 +217,13 @@ lsb_release -a
 # VPN
 ’À∫≈  zb  √‹¬Î  H3d5S6wsN
 
+#Venter ∆Ù∂Ø
+#venter.exe -locale zh_CN -s Server -u Username -p Password
+D:\VMware1\Infrastructure\Virtual Infrastructure Client\Launcher\VpxClient.exe -locale zh_CN -s 172.16.200.254 -u zhoubo01@clerware.cq -p 12345678
+
+
+
+
+
+
+
