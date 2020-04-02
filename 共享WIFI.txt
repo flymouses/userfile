@@ -1,0 +1,6 @@
+1. 启用无线承载网络
+netsh wlan show drivers
+netsh wlan set hostednetwork mode=allow ssid=Windows7 key=password
+netsh wlan start hostednetwork
+2. 上述启动成功后，会启用一个 Microsoft Hosted Network Virtual Adapter 适配器
+3. 打开网络中心，找到本地连接，右击属性，选择共享，选择共享的适配器，为刚新生成的wifi模块
